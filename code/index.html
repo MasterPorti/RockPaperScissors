@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./stylesheets/style.css" />
+    <link
+      rel="shortcut icon"
+      href="./src/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <title>RPS</title>
+  </head>
+  <body>
+    <section class="containerHome">
+      <div class="box">
+        <div class="titleContainer">
+          <img class="logo" src="./src/logo.svg" />
+        </div>
+        <div class="scoreContainer">
+          <div class="scoreTitle">SCORE</div>
+          <div class="scoreNumber" id="score"></div>
+        </div>
+      </div>
+    </section>
+    <section class="containerBottons" id="selection">
+      <div class="bottons">
+        <div class="line first" id="first"></div>
+        <div class="line second" id="second"></div>
+        <div class="line third" id="third"></div>
+        <div class="circle paper" onclick="selection('paper'); " id="paper">
+          <img src="./src/icon-paper.svg" alt="Paper" class="iconImg" />
+        </div>
+        <div
+          class="circle scissors left"
+          onclick="selection('scissors');"
+          id="scissors"
+        >
+          <img src="./src/icon-scissors.svg" alt="Paper" class="iconImg" />
+        </div>
+        <div class="circle rock top" onclick="selection('rock');" id="rock">
+          <img src="./src/icon-rock.svg" alt="Paper" class="iconImg" />
+        </div>
+      </div>
+    </section>
+    <section class="containerBottons">
+      <div class="bottonSelected">
+        <div class="titleComputer hide" id="yourTitle">YOU PICKED</div>
+        <div class="circle-disable paper hide animation" id="paperdisable">
+          <img src="./src/icon-paper.svg" alt="Paper" class="iconImg" />
+        </div>
+        <div
+          class="circle-disable scissors hide animation"
+          id="scissorsdisable"
+        >
+          <img src="./src/icon-scissors.svg" alt="scissors" class="iconImg" />
+        </div>
+        <div class="circle-disable rock hide animation" id="rockdisable">
+          <img src="./src/icon-rock.svg" alt="rock" class="iconImg" />
+        </div>
+      </div>
+      <div class="resultContainer hide" id="result">
+        <span class="win anima hide" id="win">YOU WIN</span>
+        <span class="lost anima hide" id="lost">YOU LOST</span>
+        <span class="draw anima hide" id="draw">DRAW</span>
+        <div class="playagain visibility" id="refresh" onclick="reload();">
+          <div>Play Again</div>
+        </div>
+      </div>
+      <div class="containerComputer hide" id="containerComputer">
+        <div class="titleComputer">THE HOUSE PICKED</div>
+        <div class="circleEmpty" id="circleEmpty"></div>
+        <div class="circle-disable paper hide" id="paperComputer">
+          <img src="./src/icon-paper.svg" alt="Paper" class="iconImg" />
+        </div>
+        <div class="circle-disable scissors hide" id="scissorComputer">
+          <img src="./src/icon-scissors.svg" alt="scissors" class="iconImg" />
+        </div>
+        <div class="circle-disable rock hide" id="rockComputer">
+          <img src="./src/icon-rock.svg" alt="rock" class="iconImg" />
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="./js/main.js"></script>
+</html>
